@@ -32,9 +32,9 @@ class MemberResource extends Resource
             ->schema([
                 TextInput::make('name')->required()->placeholder('Enter Name'),
                 TextInput::make('designation')->required()->placeholder('Enter Designation'),
-                TextInput::make('fb_url')->label('Facebook Url')->placeholder('Enter Facebook URL'),
-                TextInput::make('tw_url')->label('Twitter Url'),
-                TextInput::make('in_url')->label('Instagram Url'),
+                TextInput::make('fb_url')->url()->label('Facebook Url')->placeholder('Enter Facebook URL'),
+                TextInput::make('tw_url')->url()->label('Twitter Url'),
+                TextInput::make('in_url')->url()->label('Instagram Url'),
                 FileUpload::make('image'),
                 Select::make('status')->options(['active' => 'Active', 'inactive' => 'Inactive'])->default('active')
             ]);

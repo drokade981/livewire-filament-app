@@ -3,11 +3,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize">Our Services</h2>
+				<h2 class="mb-3 text-capitalize">Our Team</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="{{ route('home')}}">Home</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="{{ route('services')}}">Services</a>
+					<li class="list-inline-item">/ &nbsp; <a href="services.html">Our Team</a>
 					</li>
 				</ul>
 			</div>
@@ -34,15 +34,24 @@
 	</div>
 </section>
 
-<section class="section">
+
+<section class="section teams">
 	<div class="container">
 		<div class="row justify-content-center">
-        @forelse($services as $service)
-			<x-services-card :service="$service" />
+			<div class="col-12">
+				<div class="section-title text-center">
+					<p class="text-primary text-uppercase fw-bold mb-3">Questions You Have</p>
+					<h1>People Behind Us</h1>
+					<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing . egestas
+						<br>cursus pellentesque dignissim dui, congue. Vel etiam ut</p>
+				</div>
+			</div>
+		</div>
+		<div class="row position-relative">
+			@forelse($members as $member)
+            <x-team-card :member="$member" />
             @empty
-            no services
             @endforelse
-			
 		</div>
 	</div>
 </section>
