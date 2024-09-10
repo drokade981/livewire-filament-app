@@ -22,7 +22,8 @@ class ShowBlog extends Component
                 abort(404);
             }
             $q->where('category_id', $category->id);
-        })->orderBy('created_at', 'desc')->paginate(1);
-        return view('livewire.show-blog', compact('articles', 'categories'));
+        })->where('status', 'active')->orderBy('created_at', 'desc')->paginate(1);
+        $latestArticles = Article::where('status', 'active')->orderBy('created_at', 'desc')->limit(3)->get();
+        return view('livewire.show-blog', compact('articles', 'categories', 'latestArticles'));
     }
 }

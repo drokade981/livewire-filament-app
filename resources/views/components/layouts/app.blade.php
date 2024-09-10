@@ -133,9 +133,9 @@
 						</li>
 						<li class="mb-2"><a href="#!">Contact Us</a>
 						</li>
-						<li class="mb-2"><a href="#!">Blog</a>
+						<li class="mb-2"><a href="{{ route('blogs')}}">Blog</a>
 						</li>
-						<li class="mb-2"><a href="#!">Team</a>
+						<li class="mb-2"><a href="{{ route('team')}}">Team</a>
 						</li>
 					</ul>
 				</div>
