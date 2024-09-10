@@ -6,6 +6,7 @@ use App\Livewire\ShowService;
 use App\Livewire\Services;
 use App\Livewire\ShowTeam;
 use App\Livewire\ShowBlog;
+use App\Livewire\ArticleDetail;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -16,3 +17,4 @@ Route::get('/services', Services::class)->name('services');
 Route::get('/service/{id}', ShowService::class)->name('service');
 Route::get('/team', ShowTeam::class)->name('team');
 Route::get('/blogs', ShowBlog::class)->name('blogs');
+Route::get('/blog/{id}', ArticleDetail::class)->name('blogDetail');
