@@ -19,7 +19,7 @@
             @endif
         </div>
         <div class="content">
-        {{ $article->content}}
+        {!! $article->content !!}
         </div>
       </div>
     </div>
