@@ -8,6 +8,8 @@ use App\Livewire\ShowTeam;
 use App\Livewire\ShowBlog;
 use App\Livewire\ArticleDetail;
 use App\Livewire\FaqPage;
+use App\Livewire\ShowPage;
+use App\Livewire\ContactPage;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -20,3 +22,5 @@ Route::get('/team', ShowTeam::class)->name('team');
 Route::get('/blogs', ShowBlog::class)->name('blogs');
 Route::get('/blog/{id}', ArticleDetail::class)->name('blogDetail');
 Route::get('/faqs', FaqPage::class)->name('faqs');
+Route::get('/page/{id}', ShowPage::class)->name('pageDetail');
+Route::get('/contact', ContactPage::class)->name('contact');
