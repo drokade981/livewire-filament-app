@@ -41,13 +41,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav m-auto mb-2 mb-lg-0">
 					<li class="nav-item"> <a wire:navigate class="nav-link" href="{{ route('home')}}">Home</a></li>
-					<li class="nav-item "> <a class="nav-link" href="about.html">About Us</a></li>
+					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{route('pageDetail', 1)}}">About Us</a></li>
 					<li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('services')}}">Services</a></li>
 				<li class="nav-item "> <a wire:navigate class="nav-link" href="{{ route('team')}}">Our Team</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('blogs')}}">Blog</a></li>
 					<li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('faqs')}}">FAQ</a></li>
 				</ul>
-				<a href="#!" class="btn btn-outline-primary">Contact Us</a>				
+				<a wire:navigate href="{{ route('contact')}}" class="btn btn-outline-primary">Contact Us</a>				
 			</div>
 		</div>
 	</nav>
@@ -129,13 +129,13 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Quick Links</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">About Us</a>
+						<li class="mb-2"><a href="{{ route('pageDetail', 1)}}">About Us</a>
 						</li>
-						<li class="mb-2"><a href="#!">Contact Us</a>
+						<li class="mb-2"><a wire:navigate  href="{{ route('contact')}}">Contact Us</a>
 						</li>
-						<li class="mb-2"><a href="{{ route('blogs')}}">Blog</a>
+						<li class="mb-2"><a wire:navigate  href="{{ route('blogs')}}">Blog</a>
 						</li>
-						<li class="mb-2"><a href="{{ route('team')}}">Team</a>
+						<li class="mb-2"><a wire:navigate  href="{{ route('team')}}">Team</a>
 						</li>
 					</ul>
 				</div>

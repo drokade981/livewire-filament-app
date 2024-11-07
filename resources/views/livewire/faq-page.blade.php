@@ -21,7 +21,7 @@
 			  {{ $faq->question }}
             </h2>
             <div id="collapse-{{$loop->iteration}}"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0 @if($loop->first) show  @endif"
               aria-labelledby="heading-{{$loop->iteration}}" data-bs-parent="#accordionFAQ">
               <div class="accordion-body py-0 content">{!! $faq->answer !!}</div>
             </div>
